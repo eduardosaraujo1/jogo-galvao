@@ -115,14 +115,14 @@ js/
 
 ## 6. Lista de tarefas
 
-- [ ] T1 — `docs`: este plano.
-- [ ] T2 — `feat`: estrutura HTML e CSS (tokens, layout, componentes, responsivo).
-- [ ] T3 — `feat`: configuração (settings, categorias, arquiteturas).
-- [ ] T4 — `feat`: núcleo da lógica (state, structure, rules, spawner, engine).
-- [ ] T5 — `feat`: renderização em canvas da estrutura em camadas, itens e bugs.
-- [ ] T6 — `feat`: HUD, telas (início, briefing, pausa, game over, vitória) e entrada (teclado + toque).
-- [ ] T7 — verificação: simulação da lógica em Node e teste no navegador; `fix` do que aparecer.
-- [ ] T8 — `docs`: marcar tarefas concluídas.
+- [x] T1 — `docs`: este plano.
+- [x] T2 — `feat`: estrutura HTML e CSS (tokens, layout, componentes, responsivo).
+- [x] T3 — `feat`: configuração (settings, categorias, arquiteturas).
+- [x] T4 — `feat`: núcleo da lógica (state, structure, rules, spawner, engine).
+- [x] T5 — `feat`: renderização em canvas da estrutura em camadas, itens e bugs.
+- [x] T6 — `feat`: HUD, telas (início, briefing, pausa, game over, vitória) e entrada (teclado + toque).
+- [x] T7 — verificação: simulação da lógica em Node e teste no navegador; `fix` do que aparecer.
+- [x] T8 — `docs`: marcar tarefas concluídas.
 
 ## 7. Verificação
 
