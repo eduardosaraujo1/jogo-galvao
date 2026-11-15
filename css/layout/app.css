@@ -1,0 +1,33 @@
+/* Estrutura geral: barra superior + área de trabalho (jogo | painel). */
+.app {
+  --topbar-height: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  min-height: 100vh;
+  min-height: 100dvh;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--gap);
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--panel-width);
+  gap: var(--gap);
+  align-items: start;
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap);
+}
+
+/* Telas estreitas: painel abaixo do jogo. */
+@media (max-width: 900px) {
+  .workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

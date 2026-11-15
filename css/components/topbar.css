@@ -1,0 +1,74 @@
+/* Barra superior: título e indicadores principais. */
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  min-height: var(--topbar-height);
+  padding: 8px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.topbar__title {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  letter-spacing: 0.02em;
+}
+
+.topbar__title sup {
+  color: var(--arch);
+  transition: color var(--transition);
+}
+
+/* Indicador (rótulo + valor) */
+.stat {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.stat--wide {
+  flex: 1 1 200px;
+}
+
+.stat__label {
+  color: var(--text-muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.stat__label b {
+  color: var(--text);
+  font-family: var(--font-mono);
+}
+
+.stat__value {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stat__value--arch {
+  color: var(--arch);
+  transition: color var(--transition);
+}
+
+/* Barra de progresso (usada na evolução geral e nas categorias) */
+.meter {
+  height: 8px;
+  margin-top: 6px;
+  background: var(--surface-2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.meter__fill {
+  width: 0;
+  height: 100%;
+  background: var(--meter-color, var(--arch));
+  border-radius: inherit;
+  transition: width var(--transition), background-color var(--transition);
+}

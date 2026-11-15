@@ -1,0 +1,30 @@
+/* Variáveis de design compartilhadas por todo o CSS. */
+:root {
+  /* Superfícies */
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface-2: #1f2630;
+  --border: #30363d;
+
+  /* Texto */
+  --text: #e6edf3;
+  --text-muted: #8b949e;
+
+  /* Estados */
+  --accent: #58a6ff;
+  --danger: #ff5c5c;
+  --success: #5fd38d;
+
+  /* Cor da arquitetura atual (atualizada via JS) */
+  --arch: var(--accent);
+
+  /* Tipografia */
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "JetBrains Mono", "Fira Code", Consolas, monospace;
+
+  /* Medidas */
+  --gap: 12px;
+  --radius: 8px;
+  --panel-width: 320px;
+  --transition: 180ms ease;
+}

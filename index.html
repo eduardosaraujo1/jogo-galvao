@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistema² — construa seu software</title>
+
+  <link rel="stylesheet" href="css/base/tokens.css">
+  <link rel="stylesheet" href="css/base/reset.css">
+  <link rel="stylesheet" href="css/layout/app.css">
+  <link rel="stylesheet" href="css/components/topbar.css">
+  <link rel="stylesheet" href="css/components/board.css">
+  <link rel="stylesheet" href="css/components/overlay.css">
+  <link rel="stylesheet" href="css/components/panel.css">
+  <link rel="stylesheet" href="css/components/dpad.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1 class="topbar__title">Sistema<sup>2</sup></h1>
+
+      <div class="stat">
+        <span class="stat__label">Pontuação</span>
+        <span class="stat__value" id="score">0</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat__label">Arquitetura atual</span>
+        <span class="stat__value stat__value--arch" id="arch-name">—</span>
+      </div>
+
+      <div class="stat stat--wide">
+        <span class="stat__label">Evolução do sistema <b id="evolution-pct">0%</b></span>
+        <div class="meter"><div class="meter__fill" id="evolution-fill"></div></div>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <div class="stage">
+        <section class="board" aria-label="Área de jogo">
+          <canvas class="board__canvas" id="canvas"></canvas>
+          <div class="overlay" id="overlay" hidden></div>
+        </section>
+
+        <div class="dpad" id="dpad" aria-label="Controles de toque">
+          <button class="dpad__btn dpad__btn--top" data-dir="top" aria-label="Cima">▲</button>
+          <button class="dpad__btn dpad__btn--left" data-dir="left" aria-label="Esquerda">◀</button>
+          <button class="dpad__btn dpad__btn--pause" data-pause aria-label="Pausar">II</button>
+          <button class="dpad__btn dpad__btn--right" data-dir="right" aria-label="Direita">▶</button>
+          <button class="dpad__btn dpad__btn--bottom" data-dir="bottom" aria-label="Baixo">▼</button>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <section class="card arch" id="arch-card"></section>
+
+        <section class="card">
+          <h2 class="card__title">Artefatos da fase</h2>
+          <ul class="cats" id="cats"></ul>
+        </section>
+
+        <section class="card">
+          <h2 class="card__title">Arquiteturas</h2>
+          <ol class="phases" id="phases"></ol>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <!-- Configuração (dados) -->
+  <script src="js/config/settings.js"></script>
+  <script src="js/config/categories.js"></script>
+  <script src="js/config/architectures.js"></script>
+  <!-- Lógica do jogo (sem DOM) -->
+  <script src="js/core/state.js"></script>
+  <script src="js/core/structure.js"></script>
+  <script src="js/core/rules.js"></script>
+  <script src="js/core/spawner.js"></script>
+  <script src="js/core/engine.js"></script>
+  <!-- Interface -->
+  <script src="js/ui/renderer.js"></script>
+  <script src="js/ui/hud.js"></script>
+  <script src="js/ui/screens.js"></script>
+  <script src="js/ui/input.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+/* Controles de toque: exibidos apenas em dispositivos sem ponteiro preciso. */
+.dpad {
+  display: none;
+  grid-template-areas:
+    ". top ."
+    "left pause right"
+    ". bottom .";
+  gap: 6px;
+}
+
+@media (pointer: coarse) {
+  .dpad {
+    display: grid;
+  }
+}
+
+.dpad__btn {
+  width: 56px;
+  height: 56px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 18px;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.dpad__btn:active {
+  background: var(--surface-2);
+  border-color: var(--arch);
+}
+
+.dpad__btn--top { grid-area: top; }
+.dpad__btn--left { grid-area: left; }
+.dpad__btn--right { grid-area: right; }
+.dpad__btn--bottom { grid-area: bottom; }
+
+.dpad__btn--pause {
+  grid-area: pause;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 14px;
+}

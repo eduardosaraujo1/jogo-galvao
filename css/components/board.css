@@ -1,0 +1,25 @@
+/* Área de jogo: quadrada, limitada pela largura e pela altura da janela. */
+.board {
+  position: relative;
+  width: min(100%, calc(100dvh - var(--topbar-height) - 4 * var(--gap)));
+  min-width: min(100%, 280px);
+  aspect-ratio: 1;
+  background: var(--surface);
+  border: 2px solid var(--arch);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color var(--transition);
+}
+
+.board__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Em telas estreitas a largura manda: o jogo ocupa a largura disponível. */
+@media (max-width: 900px) {
+  .board {
+    width: min(100%, 560px);
+  }
+}
